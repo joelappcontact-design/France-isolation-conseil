@@ -121,6 +121,7 @@ p { margin-bottom: 1rem; }
   max-width: var(--container);
   margin: 0 auto;
   padding: 0 24px;
+  box-sizing: border-box;
 }
 
 .section {
@@ -261,6 +262,8 @@ p { margin-bottom: 1rem; }
   max-width: var(--container);
   margin: 0 auto;
   padding: 0 24px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .header__logo {
@@ -663,7 +666,7 @@ select.form-input {
 
 .hero__inner--stacked {
   grid-template-columns: 1fr;
-  max-width: 600px;
+  max-width: min(600px, 100%);
   margin: 0 auto;
   text-align: center;
   gap: 32px;
@@ -693,7 +696,7 @@ select.form-input {
 }
 
 .hero-home {
-  max-width: 800px;
+  max-width: min(800px, 100%);
   margin: 0 auto;
   text-align: center;
 }
@@ -884,6 +887,7 @@ select.form-input {
   display: flex;
   gap: 24px;
   margin-top: 8px;
+  flex-wrap: wrap;
 }
 
 .hero__badge {
@@ -938,11 +942,12 @@ select.form-input {
   align-items: stretch;
   gap: 0;
   width: 100%;
-  max-width: 900px;
+  max-width: min(900px, 100%);
 }
 
 .trust-bar__item {
-  flex: 1 0 auto;
+  flex: 1 1 0;
+  min-width: 0;
   text-align: center;
   padding: 12px 16px;
   border-right: 1px solid var(--gray-100);
