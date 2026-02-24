@@ -40,6 +40,8 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -51,6 +53,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
 img {
@@ -1730,31 +1734,34 @@ select.form-input {
 
 @media (max-width: 768px) {
   /* --- Global mobile fixes --- */
-  html {
-    overflow-x: hidden;
-    max-width: 100vw;
-  }
-
-  body {
-    overflow-x: hidden;
-    max-width: 100vw;
-    width: 100%;
-  }
-
-  *,
-  *::before,
-  *::after {
-    max-width: 100%;
+  html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+    width: 100% !important;
   }
 
   .container {
     padding: 0 16px;
     overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  section,
+  .section,
+  .hero,
+  .trust-bar,
+  .certifs,
+  .cta-section,
+  .footer,
+  .page-header {
+    overflow: hidden;
+    width: 100%;
+    max-width: 100vw;
   }
 
   .section {
     padding: 40px 0;
-    overflow: hidden;
   }
 
   h2, .section-title {
@@ -1783,10 +1790,12 @@ select.form-input {
     font-size: 0;
     flex-shrink: 1;
     min-width: 0;
+    white-space: normal;
+    overflow: hidden;
   }
 
   .header__logo img {
-    height: 38px;
+    height: 36px;
   }
 
   .header__nav {
@@ -1884,6 +1893,11 @@ select.form-input {
     max-width: 100%;
     text-align: center;
     width: 100%;
+    margin: 0 auto;
+  }
+
+  .hero__content--centered {
+    width: 100%;
   }
 
   .hero h1 {
@@ -1940,9 +1954,9 @@ select.form-input {
   .hero__form {
     padding: 20px 16px;
     border-radius: var(--radius-md);
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
-    max-width: 400px;
     box-sizing: border-box;
   }
 
