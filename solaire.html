@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panneaux Solaires Photovoltaïques | France Isolation Conseil</title>
+  <meta name="description" content="Installation panneaux solaires : produisez votre électricité, jusqu'à 70% d'économies. Prime autoconsommation, artisan RGE. Devis gratuit.">
+  <meta property="og:title" content="Panneaux Solaires | France Isolation Conseil">
+  <meta property="og:description" content="Produisez votre propre électricité et réduisez vos factures jusqu'à 70%. Devis gratuit.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- Bannière Tricolore -->
+  <div class="tricolore"></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="assets/images/logo.png" alt="France Isolation Conseil">
+        France Isolation <span>Conseil</span>
+      </a>
+      <nav class="header__nav">
+        <a href="index.html">Accueil</a>
+        <a href="ite.html">ITE</a>
+        <a href="solaire.html" class="active">Solaire</a>
+        <a href="pac.html">PAC</a>
+        <a href="aides.html">Aides</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html" class="btn btn--primary btn--sm" data-cta="header">Devis Gratuit</a>
+      </nav>
+      <a href="tel:+33123456789" class="header__phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        01 23 45 67 89
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html">Accueil</a>
+    <a href="ite.html">Isolation Extérieure</a>
+    <a href="solaire.html">Panneaux Solaires</a>
+    <a href="pac.html">Pompe à Chaleur</a>
+    <a href="aides.html">Aides & Financements</a>
+    <a href="about.html">À propos</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Hero + Form -->
+  <section class="hero" style="background-image:url('assets/images/hero-solaire.png')">
+    <div class="container">
+      <div class="hero__inner hero__inner--stacked">
+        <div class="hero__content hero__content--centered">
+          <span class="hero__promo">☀️ Prime autoconsommation disponible</span>
+          <h1>Panneaux Solaires <strong>Photovoltaïques</strong></h1>
+        </div>
+        <div class="hero__form" id="leadForm">
+          <h3>Votre étude solaire gratuite</h3>
+          <p class="form-subtitle">Simulation personnalisée en 24h</p>
+          <form id="contactForm" action="#" method="POST">
+            <input type="hidden" name="utm_source" id="utm_source">
+            <input type="hidden" name="utm_medium" id="utm_medium">
+            <input type="hidden" name="utm_campaign" id="utm_campaign">
+            <input type="hidden" name="gclid" id="gclid">
+            <input type="hidden" name="projet" value="solaire">
+            <div class="form-group">
+              <label>Type de logement</label>
+              <div class="type-selector">
+                <div class="type-selector__option selected" data-value="maison"><span class="icon">🏠</span> Maison</div>
+                <div class="type-selector__option" data-value="appartement"><span class="icon">🏢</span> Appartement</div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="prenom">Prénom</label>
+                <input type="text" class="form-input" id="prenom" name="prenom" placeholder="Jean" required>
+              </div>
+              <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="text" class="form-input" id="nom" name="nom" placeholder="Dupont" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="telephone">Téléphone</label>
+              <input type="tel" class="form-input" id="telephone" name="telephone" placeholder="06 12 34 56 78" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-input" id="email" name="email" placeholder="jean@exemple.fr" required>
+            </div>
+            <div class="form-group">
+              <label for="codePostal">Code postal</label>
+              <input type="text" class="form-input" id="codePostal" name="code_postal" placeholder="Ex: 75001" maxlength="5" required>
+            </div>
+            <button type="submit" class="btn btn--primary btn--lg btn--pulse" style="width:100%" data-cta="solaire-form">
+              Obtenir mon étude solaire
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </form>
+          <p style="font-size:0.75rem;color:var(--gray-300);text-align:center;margin:16px 0 0">Vos données sont protégées (RGPD). Réponse sous 24h.</p>
+        </div>
+        <div class="hero__details">
+          <p>Produisez votre propre électricité et devenez indépendant du réseau. Chaque rayon de soleil fait baisser votre facture.</p>
+          <ul class="hero__features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Jusqu'à <strong>-70%</strong> sur votre facture d'électricité</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Rentabilisé en <strong>7 à 10 ans</strong>, durée de vie 30 ans+</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Revente du surplus à EDF OA garantie 20 ans</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Prime à l'autoconsommation jusqu'à <strong>2 340€</strong></li>
+          </ul>
+          <div class="hero__badges">
+            <div class="hero__badge"><strong>25 ans</strong><span>Garantie panneaux</span></div>
+            <div class="hero__badge"><strong>-70%</strong><span>Facture électricité</span></div>
+            <div class="hero__badge"><strong>RGE</strong><span>QualiPV certifié</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="trust-bar">
+    <div class="container">
+      <div class="trust-bar__grid reveal-group">
+        <div class="trust-bar__item reveal"><strong>3&nbsp;500+</strong><span>Installations réalisées</span></div>
+        <div class="trust-bar__item reveal"><strong>9.5/10</strong><span>Satisfaction client</span></div>
+        <div class="trust-bar__item reveal"><strong>25&nbsp;ans</strong><span>Garantie panneaux</span></div>
+        <div class="trust-bar__item reveal"><strong>QualiPV</strong><span>Certifié RGE</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Avantages -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-badge">Avantages</span>
+        <h2>Pourquoi passer au solaire ?</h2>
+        <p class="subtitle">Une énergie gratuite, inépuisable, et qui valorise votre patrimoine immobilier.</p>
+      </div>
+      <div class="grid grid--3 reveal-group" style="margin-top:48px">
+        <div class="card reveal hover-lift">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></div>
+          <h3>Autoconsommation</h3>
+          <p>Consommez directement l'électricité produite par vos panneaux. Chaque kWh autoconsommé est un kWh non acheté.</p>
+        </div>
+        <div class="card reveal hover-lift">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg></div>
+          <h3>Revente du surplus</h3>
+          <p>L'électricité non consommée est rachetée par EDF OA à un tarif garanti pendant 20 ans. Un revenu passif assuré.</p>
+        </div>
+        <div class="card reveal hover-lift">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+          <h3>Valorisation immobilière</h3>
+          <p>Une maison équipée de panneaux solaires gagne en valeur. Les acquéreurs recherchent les logements à faible consommation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parcours -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-badge">Installation</span>
+        <h2>Votre projet solaire en 4 étapes</h2>
+      </div>
+      <div class="timeline" style="margin-top:48px">
+        <div class="timeline__item reveal"><div class="timeline__number">1</div><div class="timeline__content"><h4>Étude d'ensoleillement</h4><p>Nous analysons l'orientation de votre toiture, l'inclinaison et les ombres pour dimensionner l'installation optimale.</p></div></div>
+        <div class="timeline__item reveal"><div class="timeline__number">2</div><div class="timeline__content"><h4>Visite technique</h4><p>Un technicien vérifie la charpente, le raccordement électrique et définit le plan de pose des panneaux.</p></div></div>
+        <div class="timeline__item reveal"><div class="timeline__number">3</div><div class="timeline__content"><h4>Démarches & aides</h4><p>Déclaration en mairie, demande de raccordement Enedis, prime autoconsommation : on s'occupe de tout.</p></div></div>
+        <div class="timeline__item reveal"><div class="timeline__number">4</div><div class="timeline__content"><h4>Installation (1-2 jours)</h4><p>Pose des panneaux, raccordement onduleur, mise en service et vérification de production.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Aides -->
+  <section class="section section--green">
+    <div class="container">
+      <div class="text-center">
+        <h2>Aides pour le solaire</h2>
+        <p class="subtitle" style="color:rgba(255,255,255,0.8)">Des dispositifs attractifs pour rentabiliser votre installation plus vite.</p>
+      </div>
+      <div class="grid grid--3 reveal-group" style="margin-top:40px">
+        <div class="text-center reveal" style="padding:24px">
+          <div style="font-size:2.5rem;margin-bottom:8px">☀️</div>
+          <h4 style="color:var(--white);margin-bottom:4px">Prime autoconsommation</h4>
+          <p style="font-size:1.5rem;font-weight:800;color:var(--white);margin:0">Jusqu'à 2 340€</p>
+          <p style="opacity:0.7;font-size:0.85rem;margin:8px 0 0">Pour une installation de 9 kWc</p>
+        </div>
+        <div class="text-center reveal" style="padding:24px">
+          <div style="font-size:2.5rem;margin-bottom:8px">⚡</div>
+          <h4 style="color:var(--white);margin-bottom:4px">Rachat EDF OA</h4>
+          <p style="font-size:1.5rem;font-weight:800;color:var(--white);margin:0">Garanti 20 ans</p>
+          <p style="opacity:0.7;font-size:0.85rem;margin:8px 0 0">Tarif fixé par l'État</p>
+        </div>
+        <div class="text-center reveal" style="padding:24px">
+          <div style="font-size:2.5rem;margin-bottom:8px">🧾</div>
+          <h4 style="color:var(--white);margin-bottom:4px">TVA réduite</h4>
+          <p style="font-size:1.5rem;font-weight:800;color:var(--white);margin:0">10% (≤3 kWc)</p>
+          <p style="opacity:0.7;font-size:0.85rem;margin:8px 0 0">Au lieu de 20%</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Témoignages -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center"><span class="section-badge">Avis clients</span><h2>Ils produisent leur propre énergie</h2></div>
+      <div class="testimonials__grid reveal-group" style="margin-top:48px">
+        <div class="testimonial reveal hover-lift">
+          <div class="testimonial__stars">★★★★★</div>
+          <p class="testimonial__text">"6 kWc installés en une journée. Dès le premier mois, on a vu la facture EDF diminuer de moitié. Avec la revente du surplus, l'installation se rentabilise toute seule."</p>
+          <div class="testimonial__author"><div class="testimonial__avatar">JB</div><div><div class="testimonial__name">Jean-Baptiste M.</div><div class="testimonial__location">Montpellier (34)</div></div></div>
+        </div>
+        <div class="testimonial reveal hover-lift">
+          <div class="testimonial__stars">★★★★★</div>
+          <p class="testimonial__text">"L'étude d'ensoleillement était très précise. On produit même plus que prévu. L'été, on revend presque tout à EDF. Un investissement qu'on ne regrette pas."</p>
+          <div class="testimonial__author"><div class="testimonial__avatar">CG</div><div><div class="testimonial__name">Claire G.</div><div class="testimonial__location">Nice (06)</div></div></div>
+        </div>
+        <div class="testimonial reveal hover-lift">
+          <div class="testimonial__stars">★★★★★</div>
+          <p class="testimonial__text">"Équipe sérieuse et rapide. Ils ont géré les démarches Enedis et la prime autoconsommation. On touche 260€ par an de rachat EDF en plus des économies."</p>
+          <div class="testimonial__author"><div class="testimonial__avatar">AB</div><div><div class="testimonial__name">Antoine B.</div><div class="testimonial__location">Bordeaux (33)</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="text-center"><h2>Questions fréquentes sur le solaire</h2></div>
+      <div class="faq-list" style="margin-top:40px">
+        <div class="faq-item"><button class="faq-question">Quelle puissance installer pour ma maison ? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><div class="faq-answer__inner">Pour une maison avec une consommation moyenne, une installation de 3 à 6 kWc (8 à 16 panneaux) couvre 40 à 70% de vos besoins. Nous dimensionnons précisément selon votre consommation réelle et l'orientation de votre toiture.</div></div></div>
+        <div class="faq-item"><button class="faq-question">Combien rapportent les panneaux solaires ? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><div class="faq-answer__inner">En autoconsommation, vous économisez 800 à 1 500€/an sur vos factures. Le surplus revendu à EDF OA rapporte 200 à 500€/an. L'installation est rentabilisée en 7 à 10 ans, puis vous profitez d'électricité quasi-gratuite pendant 20 ans.</div></div></div>
+        <div class="faq-item"><button class="faq-question">Quelle est la durée de vie des panneaux ? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><div class="faq-answer__inner">Les panneaux sont garantis 25 ans par le fabricant et ont une durée de vie réelle de 30 à 40 ans. Après 25 ans, ils produisent encore environ 80% de leur puissance initiale.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Passez à l'énergie solaire</h2>
+      <p>Étude d'ensoleillement gratuite et personnalisée. Découvrez votre potentiel solaire.</p>
+      <a href="#leadForm" class="btn btn--white btn--lg" data-cta="cta-solaire-bottom">Obtenir mon étude solaire gratuite <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="certifs">
+    <div class="container">
+      <div class="section-label">Nos Garanties</div>
+      <h2 class="section-title">Toutes les certifications pour votre tranquillité</h2>
+      <p class="section-subtitle">France Isolation Conseil est certifié par les organismes les plus exigeants du secteur. Votre garantie d'un travail conforme et de qualité.</p>
+      <div class="certifs__grid">
+        <div class="certif-item">
+          <span class="certif-item__icon">🏅</span>
+          <h4>RGE QualiSol</h4>
+          <p>Reconnu Garant de l'Environnement pour l'installation solaire thermique</p>
+        </div>
+        <div class="certif-item">
+          <span class="certif-item__icon">🛡️</span>
+          <h4>Qualibat</h4>
+          <p>Certification professionnelle attestant de nos compétences techniques</p>
+        </div>
+        <div class="certif-item">
+          <span class="certif-item__icon">✅</span>
+          <h4>RGE QualiPAC</h4>
+          <p>Qualification pour l'installation de pompes à chaleur</p>
+        </div>
+        <div class="certif-item">
+          <span class="certif-item__icon">📋</span>
+          <h4>Qualibat RGE ITE</h4>
+          <p>Isolation thermique par l'extérieur et par l'intérieur</p>
+        </div>
+        <div class="certif-item">
+          <span class="certif-item__icon">🔒</span>
+          <h4>Assurance Décennale</h4>
+          <p>Garantie décennale couvrant tous nos travaux pendant 10 ans</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div><div class="footer__brand"><img src="assets/images/logo.png" alt="France Isolation Conseil" style="height:36px;width:auto;margin-bottom:8px"> France Isolation <span>Conseil</span></div><p class="footer__desc">Votre partenaire de confiance pour l'isolation thermique, les pompes à chaleur et les panneaux solaires.</p></div>
+        <div><h4>Nos solutions</h4><div class="footer__links"><a href="ite.html">Isolation Extérieure</a><a href="solaire.html">Panneaux Solaires</a><a href="pac.html">Pompe à Chaleur</a><a href="aides.html">Aides</a></div></div>
+        <div><h4>Entreprise</h4><div class="footer__links"><a href="about.html">À propos</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div></div>
+        <div><h4>Contact</h4><div class="footer__links"><a href="tel:+33123456789">01 23 45 67 89</a><a href="mailto:contact@france-isolation-conseil.fr">contact@france-isolation-conseil.fr</a></div></div>
+      </div>
+      <div class="footer__bottom"><span>© 2026 France Isolation Conseil — Tous droits réservés</span><div><a href="#">Mentions légales</a> · <a href="#">Confidentialité</a></div></div>
+    </div>
+  </footer>
+
+  <div class="sticky-cta"><a href="#leadForm" class="btn btn--primary btn--pulse" data-cta="sticky-solaire">Étude Solaire Gratuite — 24h</a></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/faq.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+/* ============================================
+   FRANCE ISOLATION CONSEIL - Animations
+   ============================================ */
+
+/* --- Scroll Reveal --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal--left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal--left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal--right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal--right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal--scale {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal--scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Staggered delays for grid children */
+.reveal-group > *:nth-child(1) { transition-delay: 0s; }
+.reveal-group > *:nth-child(2) { transition-delay: 0.1s; }
+.reveal-group > *:nth-child(3) { transition-delay: 0.2s; }
+.reveal-group > *:nth-child(4) { transition-delay: 0.3s; }
+.reveal-group > *:nth-child(5) { transition-delay: 0.4s; }
+.reveal-group > *:nth-child(6) { transition-delay: 0.5s; }
+
+/* --- Counter Animation --- */
+.counter {
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- Hover Effects --- */
+.hover-lift {
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* --- Pulse for CTA --- */
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 4px 16px rgba(200, 16, 46, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 32px rgba(200, 16, 46, 0.5);
+  }
+}
+
+.btn--pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* --- Float (for decorative elements) --- */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* --- Shimmer for loading states --- */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, var(--gray-100) 25%, var(--off-white) 50%, var(--gray-100) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+/* --- Spinner --- */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid var(--gray-100);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+/* --- Smooth image load --- */
+.img-load {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.img-load.loaded {
+  opacity: 1;
+}
+
+/* --- Timeline line animation --- */
+.timeline__item .timeline__number {
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.timeline__item:hover .timeline__number {
+  transform: scale(1.1);
+  background: var(--accent);
+}
+
+/* --- Card entrance for gallery items --- */
+.gallery-item {
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+/* --- Reduce motion for accessibility --- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal,
+  .reveal--left,
+  .reveal--right,
+  .reveal--scale {
+    opacity: 1;
+    transform: none;
+  }
+}

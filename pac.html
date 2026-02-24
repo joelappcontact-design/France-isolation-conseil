@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pompe à Chaleur Air/Eau | France Isolation Conseil</title>
+  <meta name="description" content="Installation pompe à chaleur air/eau : divisez vos factures par 3. Aides MaPrimeRénov' jusqu'à 5 000€, artisan RGE. Devis gratuit.">
+  <meta property="og:title" content="Pompe à Chaleur | France Isolation Conseil">
+  <meta property="og:description" content="Remplacez votre chaudière et divisez vos factures de chauffage par 3. Devis gratuit.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- Bannière Tricolore -->
+  <div class="tricolore"></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="assets/images/logo.png" alt="France Isolation Conseil">
+        France Isolation <span>Conseil</span>
+      </a>
+      <nav class="header__nav">
+        <a href="index.html">Accueil</a>
+        <a href="ite.html">ITE</a>
+        <a href="solaire.html">Solaire</a>
+        <a href="pac.html" class="active">PAC</a>
+        <a href="aides.html">Aides</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html" class="btn btn--primary btn--sm" data-cta="header">Devis Gratuit</a>
+      </nav>
+      <a href="tel:+33123456789" class="header__phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        01 23 45 67 89
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html">Accueil</a>
+    <a href="ite.html">Isolation Extérieure</a>
+    <a href="solaire.html">Panneaux Solaires</a>
+    <a href="pac.html">Pompe à Chaleur</a>
+    <a href="aides.html">Aides & Financements</a>
+    <a href="about.html">À propos</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Hero + Form -->
+  <section class="hero" style="background-image:url('assets/images/hero-pac.png')">
+    <div class="container">
+      <div class="hero__inner hero__inner--stacked">
+        <div class="hero__content hero__content--centered">
+          <span class="hero__promo">🔥 Jusqu'à 5 000€ d'aides MaPrimeRénov'</span>
+          <h1>Pompe à Chaleur <strong>Air/Eau</strong></h1>
+        </div>
+        <div class="hero__form" id="leadForm">
+          <h3>Votre devis PAC gratuit</h3>
+          <p class="form-subtitle">Estimation de vos aides en 24h</p>
+          <form id="contactForm" action="#" method="POST">
+            <input type="hidden" name="utm_source" id="utm_source">
+            <input type="hidden" name="utm_medium" id="utm_medium">
+            <input type="hidden" name="utm_campaign" id="utm_campaign">
+            <input type="hidden" name="gclid" id="gclid">
+            <input type="hidden" name="projet" value="pac">
+            <div class="form-group">
+              <label>Votre chauffage actuel</label>
+              <div class="type-selector">
+                <div class="type-selector__option selected" data-value="fioul"><span class="icon">🛢️</span> Fioul</div>
+                <div class="type-selector__option" data-value="gaz"><span class="icon">🔥</span> Gaz</div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="prenom">Prénom</label>
+                <input type="text" class="form-input" id="prenom" name="prenom" placeholder="Jean" required>
+              </div>
+              <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="text" class="form-input" id="nom" name="nom" placeholder="Dupont" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="telephone">Téléphone</label>
+              <input type="tel" class="form-input" id="telephone" name="telephone" placeholder="06 12 34 56 78" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-input" id="email" name="email" placeholder="jean@exemple.fr" required>
+            </div>
+            <div class="form-group">
+              <label for="codePostal">Code postal</label>
+              <input type="text" class="form-input" id="codePostal" name="code_postal" placeholder="Ex: 75001" maxlength="5" required>
+            </div>
+            <button type="submit" class="btn btn--primary btn--lg btn--pulse" style="width:100%" data-cta="pac-form">
+              Obtenir mon devis PAC gratuit
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </form>
+          <p style="font-size:0.75rem;color:var(--gray-300);text-align:center;margin:16px 0 0">Vos données sont protégées (RGPD). Réponse sous 24h.</p>
+        </div>
+        <div class="hero__details">
+          <p>Remplacez votre chaudière fioul ou gaz et divisez vos factures de chauffage par 3. La PAC capte l'énergie gratuite de l'air extérieur.</p>
+          <ul class="hero__features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Jusqu'à <strong>-70%</strong> sur votre facture de chauffage</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Chauffage <strong>+ eau chaude sanitaire</strong> intégrée</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Énergie renouvelable, <strong>faible empreinte carbone</strong></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> MaPrimeRénov' + CEE : <strong>jusqu'à 9 000€</strong> d'aides</li>
+          </ul>
+          <div class="hero__badges">
+            <div class="hero__badge"><strong>÷3</strong><span>Facture chauffage</span></div>
+            <div class="hero__badge"><strong>9 000€</strong><span>Aides cumulées max</span></div>
+            <div class="hero__badge"><strong>RGE</strong><span>Certifié QualiPAC</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="trust-bar">
+    <div class="container">
+      <div class="trust-bar__grid reveal-group">
+        <div class="trust-bar__item reveal"><strong>5&nbsp;000+</strong><span>PAC installées</span></div>
+        <div class="trust-bar__item reveal"><strong>9.5/10</strong><span>Satisfaction client</span></div>
+        <div class="trust-bar__item reveal"><strong>QualiPAC</strong><span>Certifié RGE</span></div>
+        <div class="trust-bar__item reveal"><strong>10&nbsp;ans</strong><span>Garantie décennale</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Avantages -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-badge">Performance</span>
+        <h2>Pourquoi choisir la pompe à chaleur ?</h2>
+        <p class="subtitle">La solution de chauffage la plus économique et écologique du marché.</p>
+      </div>
+      <div class="grid grid--3 reveal-group" style="margin-top:48px">
+        <div class="card reveal hover-lift">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg></div>
+          <h3>Factures divisées par 3</h3>
+          <p>La PAC utilise 1 kWh d'électricité pour produire 3 à 4 kWh de chaleur. Votre COP (coefficient de performance) garantit des économies massives.</p>
+        </div>
+        <div class="card reveal hover-lift">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg></div>
+          <h3>Chauffage + Eau chaude</h3>
+          <p>La PAC air/eau alimente vos radiateurs ou plancher chauffant ET produit votre eau chaude sanitaire. Un seul appareil pour tout.</p>
+        </div>
+        <div class="card reveal hover-lift">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3>Écologique</h3>
+          <p>75% de l'énergie provient de l'air extérieur (gratuit et renouvelable). Votre empreinte carbone chute drastiquement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parcours -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-badge">Installation</span>
+        <h2>Votre PAC installée en 4 étapes</h2>
+      </div>
+      <div class="timeline" style="margin-top:48px">
+        <div class="timeline__item reveal"><div class="timeline__number">1</div><div class="timeline__content"><h4>Bilan thermique</h4><p>Nous calculons la puissance idéale de votre PAC selon la surface, l'isolation et le climat de votre région.</p></div></div>
+        <div class="timeline__item reveal"><div class="timeline__number">2</div><div class="timeline__content"><h4>Visite technique</h4><p>Un technicien RGE vérifie l'installation existante (radiateurs, tuyauterie) et définit l'emplacement de l'unité extérieure.</p></div></div>
+        <div class="timeline__item reveal"><div class="timeline__number">3</div><div class="timeline__content"><h4>Montage des aides</h4><p>Nous déposons vos dossiers MaPrimeRénov' et CEE. Les aides sont déduites de votre facture.</p></div></div>
+        <div class="timeline__item reveal"><div class="timeline__number">4</div><div class="timeline__content"><h4>Installation (2 jours)</h4><p>Dépose de l'ancienne chaudière, pose de la PAC, raccordement hydraulique et mise en service.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Aides -->
+  <section class="section section--green">
+    <div class="container">
+      <div class="text-center">
+        <h2>Aides pour la pompe à chaleur</h2>
+        <p class="subtitle" style="color:rgba(255,255,255,0.8)">Des aides massives pour sortir du fioul et du gaz.</p>
+      </div>
+      <div class="grid grid--3 reveal-group" style="margin-top:40px">
+        <div class="text-center reveal" style="padding:24px">
+          <div style="font-size:2.5rem;margin-bottom:8px">💰</div>
+          <h4 style="color:var(--white);margin-bottom:4px">MaPrimeRénov'</h4>
+          <p style="font-size:1.5rem;font-weight:800;color:var(--white);margin:0">Jusqu'à 5 000€</p>
+          <p style="opacity:0.7;font-size:0.85rem;margin:8px 0 0">Selon vos revenus</p>
+        </div>
+        <div class="text-center reveal" style="padding:24px">
+          <div style="font-size:2.5rem;margin-bottom:8px">📋</div>
+          <h4 style="color:var(--white);margin-bottom:4px">Primes CEE</h4>
+          <p style="font-size:1.5rem;font-weight:800;color:var(--white);margin:0">Jusqu'à 4 000€</p>
+          <p style="opacity:0.7;font-size:0.85rem;margin:8px 0 0">Cumulable avec MaPrimeRénov'</p>
+        </div>
+        <div class="text-center reveal" style="padding:24px">
+          <div style="font-size:2.5rem;margin-bottom:8px">🏦</div>
+          <h4 style="color:var(--white);margin-bottom:4px">Éco-PTZ</h4>
+          <p style="font-size:1.5rem;font-weight:800;color:var(--white);margin:0">Jusqu'à 50 000€</p>
+          <p style="opacity:0.7;font-size:0.85rem;margin:8px 0 0">Prêt à taux zéro</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Témoignages -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center"><span class="section-badge">Avis clients</span><h2>Ils ont remplacé leur chaudière</h2></div>
+      <div class="testimonials__grid reveal-group" style="margin-top:48px">
+        <div class="testimonial reveal hover-lift">
+          <div class="testimonial__stars">★★★★★</div>
+          <p class="testimonial__text">"On est passés du fioul à la PAC. Résultat : facture de chauffage divisée par 3 et plus d'odeur de fuel. Le confort est incomparable, la maison est chauffée uniformément."</p>
+          <div class="testimonial__author"><div class="testimonial__avatar">FL</div><div><div class="testimonial__name">François L.</div><div class="testimonial__location">Rennes (35)</div></div></div>
+        </div>
+        <div class="testimonial reveal hover-lift">
+          <div class="testimonial__stars">★★★★★</div>
+          <p class="testimonial__text">"Avec les aides, on a payé 3 500€ au lieu de 12 000€. L'installation a pris 2 jours. C'est silencieux, performant, et on a aussi l'eau chaude avec."</p>
+          <div class="testimonial__author"><div class="testimonial__avatar">NM</div><div><div class="testimonial__name">Nathalie M.</div><div class="testimonial__location">Strasbourg (67)</div></div></div>
+        </div>
+        <div class="testimonial reveal hover-lift">
+          <div class="testimonial__stars">★★★★★</div>
+          <p class="testimonial__text">"Le technicien a bien dimensionné la PAC pour notre maison de 140m². Même par -5°C cet hiver, on était à 21°C sans appoint. Fini le gaz, bonjour les économies."</p>
+          <div class="testimonial__author"><div class="testimonial__avatar">DV</div><div><div class="testimonial__name">David V.</div><div class="testimonial__location">Lille (59)</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="text-center"><h2>Questions fréquentes sur la PAC</h2></div>
+      <div class="faq-list" style="margin-top:40px">
+        <div class="faq-item"><button class="faq-question">La PAC fonctionne-t-elle quand il fait très froid ? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><div class="faq-answer__inner">Oui. Les PAC air/eau modernes fonctionnent efficacement jusqu'à -15°C voire -25°C. Leur COP diminue légèrement par grand froid, mais elles restent bien plus économiques qu'une chaudière. Un appoint électrique intégré prend le relais les rares jours de froid extrême.</div></div></div>
+        <div class="faq-item"><button class="faq-question">Est-ce bruyant ? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><div class="faq-answer__inner">Les PAC de dernière génération émettent entre 35 et 45 dB à 1 mètre, soit le niveau d'une conversation à voix basse. L'unité intérieure est quasi-silencieuse. Le placement de l'unité extérieure est étudié pour minimiser toute nuisance.</div></div></div>
+        <div class="faq-item"><button class="faq-question">Faut-il changer mes radiateurs ? <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-answer"><div class="faq-answer__inner">Dans la majorité des cas, non. La PAC air/eau se raccorde sur votre circuit existant (radiateurs ou plancher chauffant). Le technicien vérifie la compatibilité lors de la visite technique. Si vos radiateurs sont très anciens, un dimensionnement adapté suffit généralement.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Remplacez votre chaudière, divisez vos factures</h2>
+      <p>Étude personnalisée gratuite. Découvrez combien vous pouvez économiser.</p>
+      <a href="#leadForm" class="btn btn--white btn--lg" data-cta="cta-pac-bottom">Obtenir mon devis PAC gratuit <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="certifs">
+    <div class="container">
+      <div class="section-label">Nos Garanties</div>
+      <h2 class="section-title">Toutes les certifications pour votre tranquillité</h2>
+      <p class="section-subtitle">France Isolation Conseil est certifié par les organismes les plus exigeants du secteur. Votre garantie d'un travail conforme et de qualité.</p>
+      <div class="certifs__grid">
+        <div class="certif-item">
+          <span class="certif-item__icon">🏅</span>
+          <h4>RGE QualiSol</h4>
+          <p>Reconnu Garant de l'Environnement pour l'installation solaire thermique</p>
+        </div>
+        <div class="certif-item">
+          <span class="certif-item__icon">🛡️</span>
+          <h4>Qualibat</h4>
+          <p>Certification professionnelle attestant de nos compétences techniques</p>
+        </div>
+        <div class="certif-item">
+          <span class="certif-item__icon">✅</span>
+          <h4>RGE QualiPAC</h4>
+          <p>Qualification pour l'installation de pompes à chaleur</p>
+        </div>
+        <div class="certif-item">
+          <span class="certif-item__icon">📋</span>
+          <h4>Qualibat RGE ITE</h4>
+          <p>Isolation thermique par l'extérieur et par l'intérieur</p>
+        </div>
+        <div class="certif-item">
+          <span class="certif-item__icon">🔒</span>
+          <h4>Assurance Décennale</h4>
+          <p>Garantie décennale couvrant tous nos travaux pendant 10 ans</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div><div class="footer__brand"><img src="assets/images/logo.png" alt="France Isolation Conseil" style="height:36px;width:auto;margin-bottom:8px"> France Isolation <span>Conseil</span></div><p class="footer__desc">Votre partenaire de confiance pour l'isolation thermique, les pompes à chaleur et les panneaux solaires.</p></div>
+        <div><h4>Nos solutions</h4><div class="footer__links"><a href="ite.html">Isolation Extérieure</a><a href="solaire.html">Panneaux Solaires</a><a href="pac.html">Pompe à Chaleur</a><a href="aides.html">Aides</a></div></div>
+        <div><h4>Entreprise</h4><div class="footer__links"><a href="about.html">À propos</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a></div></div>
+        <div><h4>Contact</h4><div class="footer__links"><a href="tel:+33123456789">01 23 45 67 89</a><a href="mailto:contact@france-isolation-conseil.fr">contact@france-isolation-conseil.fr</a></div></div>
+      </div>
+      <div class="footer__bottom"><span>© 2026 France Isolation Conseil — Tous droits réservés</span><div><a href="#">Mentions légales</a> · <a href="#">Confidentialité</a></div></div>
+    </div>
+  </footer>
+
+  <div class="sticky-cta"><a href="#leadForm" class="btn btn--primary btn--pulse" data-cta="sticky-pac">Devis PAC Gratuit — Réponse 24h</a></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/faq.js"></script>
+</body>
+</html>

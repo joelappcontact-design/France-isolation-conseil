@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Devis | France Isolation Conseil</title>
+  <meta name="description" content="Demandez votre devis gratuit pour l'isolation extérieure, combles, pompe à chaleur. Réponse sous 24h. Artisan RGE certifié.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- Bannière Tricolore -->
+  <div class="tricolore"></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">
+        <img src="assets/images/logo.png" alt="France Isolation Conseil">
+        France Isolation <span>Conseil</span>
+      </a>
+      <nav class="header__nav">
+        <a href="index.html">Accueil</a>
+        <a href="ite.html">ITE</a>
+        <a href="solaire.html">Solaire</a>
+        <a href="pac.html">PAC</a>
+        <a href="aides.html">Aides</a>
+        <a href="about.html">À propos</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html" class="btn btn--primary btn--sm active" data-cta="header">Devis Gratuit</a>
+      </nav>
+      <a href="tel:+33123456789" class="header__phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        01 23 45 67 89
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html">Accueil</a>
+    <a href="ite.html">Isolation Extérieure</a>
+    <a href="solaire.html">Panneaux Solaires</a>
+    <a href="pac.html">Pompe à Chaleur</a>
+    <a href="aides.html">Aides & Financements</a>
+    <a href="about.html">À propos</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <span class="section-badge">Contactez-nous</span>
+      <h1>Demandez votre devis gratuit</h1>
+      <p>Réponse sous 24h. Étude personnalisée et sans engagement.</p>
+    </div>
+  </section>
+
+  <!-- Contact Form + Info -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="reveal">
+          <h2 style="margin-bottom:8px">Parlez-nous de votre projet</h2>
+          <p class="text-muted" style="margin-bottom:32px">Remplissez le formulaire ci-dessous et un conseiller vous rappelle sous 24h pour une étude personnalisée.</p>
+          <form id="contactForm" action="#" method="POST">
+            <input type="hidden" name="utm_source" id="utm_source">
+            <input type="hidden" name="utm_medium" id="utm_medium">
+            <input type="hidden" name="utm_campaign" id="utm_campaign">
+            <input type="hidden" name="gclid" id="gclid">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="prenom">Prénom *</label>
+                <input type="text" class="form-input" id="prenom" name="prenom" placeholder="Jean" required>
+              </div>
+              <div class="form-group">
+                <label for="nom">Nom *</label>
+                <input type="text" class="form-input" id="nom" name="nom" placeholder="Dupont" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" class="form-input" id="email" name="email" placeholder="jean@exemple.fr" required>
+              </div>
+              <div class="form-group">
+                <label for="telephone">Téléphone *</label>
+                <input type="tel" class="form-input" id="telephone" name="telephone" placeholder="06 12 34 56 78" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="adresse">Adresse / Ville</label>
+                <input type="text" class="form-input" id="adresse" name="adresse" placeholder="12 rue de la Paix, Paris">
+              </div>
+              <div class="form-group">
+                <label for="codePostal">Code postal *</label>
+                <input type="text" class="form-input" id="codePostal" name="code_postal" placeholder="75001" maxlength="5" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="projet">Type de projet *</label>
+              <select class="form-input" id="projet" name="projet" required>
+                <option value="">Sélectionnez un projet</option>
+                <option value="ite">Isolation Extérieure (ITE)</option>
+                <option value="combles">Isolation des combles</option>
+                <option value="pac">Pompe à chaleur</option>
+                <option value="solaire">Panneaux solaires</option>
+                <option value="global">Rénovation globale</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message (optionnel)</label>
+              <textarea class="form-input" id="message" name="message" rows="4" placeholder="Décrivez votre projet, vos questions..." style="resize:vertical"></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--lg" style="width:100%" data-cta="contact-form">
+              Envoyer ma demande
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+            <p style="font-size:0.75rem;color:var(--gray-300);text-align:center;margin-top:12px">
+              En soumettant ce formulaire, vous acceptez d'être contacté par France Isolation Conseil. Données protégées (RGPD).
+            </p>
+          </form>
+        </div>
+        <div class="reveal">
+          <div class="contact-info-card">
+            <h3 style="margin-bottom:24px">Nos coordonnées</h3>
+            <div class="contact-info-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <div>
+                <h4>Téléphone</h4>
+                <p><a href="tel:+33123456789" style="color:var(--primary);font-weight:600">01 23 45 67 89</a></p>
+                <p style="font-size:0.8rem">Appel gratuit · Lun-Ven 9h-18h</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <div>
+                <h4>Email</h4>
+                <p><a href="mailto:contact@france-isolation-conseil.fr" style="color:var(--primary)">contact@france-isolation-conseil.fr</a></p>
+                <p style="font-size:0.8rem">Réponse sous 24h</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div>
+                <h4>Zone d'intervention</h4>
+                <p>France métropolitaine</p>
+                <p style="font-size:0.8rem">Île-de-France, PACA, Occitanie, Nouvelle-Aquitaine...</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <div>
+                <h4>Horaires</h4>
+                <p>Lundi — Vendredi : 9h - 18h</p>
+                <p style="font-size:0.8rem">Samedi sur rendez-vous</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:24px;background:rgba(27,94,32,0.04);border:2px solid var(--primary);border-radius:var(--radius-md);padding:24px;text-align:center">
+            <h4 style="color:var(--primary);margin-bottom:8px">Rappel gratuit immédiat</h4>
+            <p style="font-size:0.9rem;color:var(--gray-600);margin-bottom:16px">Un conseiller vous rappelle dans les 30 minutes.</p>
+            <a href="tel:+33123456789" class="btn btn--secondary" data-cta="callback">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Être rappelé maintenant
+            </a>
+          </div>
+
+          <div class="map-placeholder" style="margin-top:24px">
+            <span>Google Maps — Zone d'intervention</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="certifs">
+    <div class="container">
+      <div class="section-label">Nos Garanties</div>
+      <h2 class="section-title">Toutes les certifications pour votre tranquillité</h2>
+      <p class="section-subtitle">France Isolation Conseil est certifié par les organismes les plus exigeants du secteur. Votre garantie d'un travail conforme et de qualité.</p>
+      <div class="certifs__grid">
+        <div class="certif-item">
+          <span class="certif-item__icon">🏅</span>
+          <h4>RGE QualiSol</h4>
+          <p>Reconnu Garant de l'Environnement pour l'installation solaire thermique</p>
+        </div>
+        <div class="certif-item">
+          <span class="certif-item__icon">🛡️</span>
+          <h4>Qualibat</h4>
+          <p>Certification professionnelle attestant de nos compétences techniques</p>
+        </div>
+        <div class="certif-item">
+          <span class="certif-item__icon">✅</span>
+          <h4>RGE QualiPAC</h4>
+          <p>Qualification pour l'installation de pompes à chaleur</p>
+        </div>
+        <div class="certif-item">
+          <span class="certif-item__icon">📋</span>
+          <h4>Qualibat RGE ITE</h4>
+          <p>Isolation thermique par l'extérieur et par l'intérieur</p>
+        </div>
+        <div class="certif-item">
+          <span class="certif-item__icon">🔒</span>
+          <h4>Assurance Décennale</h4>
+          <p>Garantie décennale couvrant tous nos travaux pendant 10 ans</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand"><img src="assets/images/logo.png" alt="France Isolation Conseil" style="height:36px;width:auto;margin-bottom:8px"> France Isolation <span>Conseil</span></div>
+          <p class="footer__desc">Votre partenaire de confiance pour l'isolation thermique, les pompes à chaleur et les panneaux solaires.</p>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <div class="footer__links">
+            <a href="index.html">Accueil</a>
+            <a href="ite.html">Isolation Extérieure</a>
+            <a href="solaire.html">Panneaux Solaires</a>
+            <a href="pac.html">Pompe à Chaleur</a>
+            <a href="aides.html">Aides</a>
+          </div>
+        </div>
+        <div>
+          <h4>Entreprise</h4>
+          <div class="footer__links">
+            <a href="about.html">À propos</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <div class="footer__links">
+            <a href="tel:+33123456789">01 23 45 67 89</a>
+            <a href="mailto:contact@france-isolation-conseil.fr">contact@france-isolation-conseil.fr</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 France Isolation Conseil — Tous droits réservés</span>
+        <div><a href="#">Mentions légales</a> · <a href="#">Confidentialité</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
