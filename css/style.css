@@ -915,6 +915,11 @@ select.form-input {
   padding: 36px;
   box-shadow: var(--shadow-xl);
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .hero__form h3 {
