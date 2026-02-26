@@ -40,8 +40,9 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
+  max-width: 100vw;
 }
 
 body {
@@ -52,8 +53,9 @@ body {
   background: var(--white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
+  max-width: 100vw;
   position: relative;
 }
 
@@ -278,7 +280,6 @@ p { margin-bottom: 1rem; }
   font-weight: 300;
   letter-spacing: 0.5px;
   color: var(--primary);
-  white-space: nowrap;
 }
 
 .header__logo img {
@@ -418,7 +419,6 @@ p { margin-bottom: 1rem; }
   font-weight: 600;
   border-radius: var(--radius-full);
   transition: all var(--transition);
-  white-space: nowrap;
   cursor: pointer;
 }
 
@@ -972,7 +972,6 @@ select.form-input {
   color: var(--primary);
   font-weight: 700;
   line-height: 1;
-  white-space: nowrap;
 }
 
 .trust-bar__item span {
@@ -1740,7 +1739,7 @@ select.form-input {
 @media (max-width: 768px) {
   /* --- Global mobile fixes --- */
   html, body {
-    overflow-x: hidden !important;
+    overflow-x: clip !important;
     max-width: 100vw !important;
     width: 100% !important;
   }
@@ -1748,7 +1747,8 @@ select.form-input {
   .container {
     padding: 0 16px;
     overflow: hidden;
-    width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
     box-sizing: border-box;
   }
 
@@ -1761,12 +1761,28 @@ select.form-input {
   .footer,
   .page-header {
     overflow: hidden;
-    width: 100%;
-    max-width: 100vw;
+    width: 100% !important;
+    max-width: 100vw !important;
+    box-sizing: border-box;
   }
 
   .section {
     padding: 40px 0;
+  }
+
+  .hero__inner,
+  .hero__inner--stacked,
+  .hero-home,
+  .trust-bar__grid,
+  .grid,
+  .grid--2,
+  .grid--3,
+  .grid--4,
+  .certifs__grid,
+  .footer__grid,
+  .testimonials__grid {
+    max-width: 100% !important;
+    overflow: hidden;
   }
 
   h2, .section-title {
@@ -1870,14 +1886,12 @@ select.form-input {
 
   .trust-bar__item strong {
     font-size: 1rem;
-    white-space: nowrap;
   }
 
   .trust-bar__item span {
     font-size: 0.5rem;
     letter-spacing: 0.5px;
     margin-top: 4px;
-    white-space: nowrap;
   }
 
   /* --- Hero landing pages mobile (ITE, Solaire, PAC) --- */
