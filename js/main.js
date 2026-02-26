@@ -168,56 +168,110 @@
     });
   });
 
-  // Form submission
+  // --- Google Sheet URL ---
+  var GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbxrByaF4tBVlm92txoGeRVa5Hv58ZzQfFEh_VEJBrfoz6eSBmGsTQOjFpXOfOROcDE/exec';
+
+  function sendToGoogleSheet(formData, btn, originalText, form) {
+    fetch(GOOGLE_SHEET_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    }).then(function() {
+      btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Demande envoyée !';
+      btn.style.background = '#1A3160';
+      setTimeout(function() {
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+        btn.style.background = '';
+        form.reset();
+        var firstOption = form.querySelector('.type-selector__option');
+        if (firstOption) {
+          form.querySelectorAll('.type-selector__option').forEach(function(o) { o.classList.remove('selected'); });
+          firstOption.classList.add('selected');
+        }
+        var step2 = document.querySelector('.form-step[data-step="2"]');
+        var step1 = document.querySelector('.form-step[data-step="1"]');
+        var progress2 = document.querySelector('.form-progress__step[data-step="2"]');
+        if (step2) step2.classList.remove('active');
+        if (step1) step1.classList.add('active');
+        if (progress2) progress2.classList.remove('active');
+      }, 3000);
+    }).catch(function() {
+      btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Demande envoyée !';
+      btn.style.background = '#1A3160';
+      setTimeout(function() {
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+        btn.style.background = '';
+        form.reset();
+      }, 3000);
+    });
+  }
+
+  function getPageName() {
+    var path = window.location.pathname;
+    if (path.indexOf('ite') !== -1) return 'ITE';
+    if (path.indexOf('solaire') !== -1) return 'Solaire';
+    if (path.indexOf('pac') !== -1) return 'PAC';
+    if (path.indexOf('contact') !== -1) return 'Contact';
+    return 'Accueil';
+  }
+
+  // Form submission (homepage multi-step)
   if (simulationForm) {
     simulationForm.addEventListener('submit', function(e) {
       e.preventDefault();
 
-      const btn = this.querySelector('[type="submit"]');
-      const originalText = btn.innerHTML;
+      var btn = this.querySelector('[type="submit"]');
+      var originalText = btn.innerHTML;
       btn.innerHTML = '<span class="spinner"></span> Envoi en cours...';
       btn.disabled = true;
 
-      setTimeout(function() {
-        btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Demande envoyée !';
-        btn.style.background = '#1A3160';
+      var selected = this.querySelector('.type-selector__option.selected');
+      var formData = {
+        page: getPageName(),
+        statut: selected ? selected.getAttribute('data-value') : '',
+        prenom: (this.querySelector('[name="prenom"]') || {}).value || '',
+        nom: (this.querySelector('[name="nom"]') || {}).value || '',
+        telephone: (this.querySelector('[name="telephone"]') || {}).value || '',
+        email: (this.querySelector('[name="email"]') || {}).value || '',
+        code_postal: (this.querySelector('[name="code_postal"]') || {}).value || '',
+        utm_source: (this.querySelector('[name="utm_source"]') || {}).value || '',
+        utm_medium: (this.querySelector('[name="utm_medium"]') || {}).value || '',
+        utm_campaign: (this.querySelector('[name="utm_campaign"]') || {}).value || ''
+      };
 
-        setTimeout(function() {
-          btn.innerHTML = originalText;
-          btn.disabled = false;
-          btn.style.background = '';
-          simulationForm.reset();
-          document.querySelector('.form-step[data-step="2"]').classList.remove('active');
-          document.querySelector('.form-step[data-step="1"]').classList.add('active');
-          document.querySelector('.form-progress__step[data-step="2"]').classList.remove('active');
-          document.querySelector('.type-selector__option[data-value="maison"]').classList.add('selected');
-        }, 3000);
-      }, 1500);
+      sendToGoogleSheet(formData, btn, originalText, this);
     });
   }
 
-  // Contact form
-  const contactForm = document.getElementById('contactForm');
+  // Contact form (ITE, Solaire, PAC, Contact pages)
+  var contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
 
-      const btn = this.querySelector('[type="submit"]');
-      const originalText = btn.innerHTML;
+      var btn = this.querySelector('[type="submit"]');
+      var originalText = btn.innerHTML;
       btn.innerHTML = '<span class="spinner"></span> Envoi en cours...';
       btn.disabled = true;
 
-      setTimeout(function() {
-        btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Demande envoyée avec succès !';
-        btn.style.background = '#1A3160';
+      var selected = this.querySelector('.type-selector__option.selected');
+      var formData = {
+        page: getPageName(),
+        statut: selected ? selected.getAttribute('data-value') : '',
+        prenom: (this.querySelector('[name="prenom"]') || {}).value || '',
+        nom: (this.querySelector('[name="nom"]') || {}).value || '',
+        telephone: (this.querySelector('[name="telephone"]') || {}).value || '',
+        email: (this.querySelector('[name="email"]') || {}).value || '',
+        code_postal: (this.querySelector('[name="code_postal"]') || {}).value || '',
+        utm_source: (this.querySelector('[name="utm_source"]') || {}).value || '',
+        utm_medium: (this.querySelector('[name="utm_medium"]') || {}).value || '',
+        utm_campaign: (this.querySelector('[name="utm_campaign"]') || {}).value || ''
+      };
 
-        setTimeout(function() {
-          btn.innerHTML = originalText;
-          btn.disabled = false;
-          btn.style.background = '';
-          contactForm.reset();
-        }, 3000);
-      }, 1500);
+      sendToGoogleSheet(formData, btn, originalText, this);
     });
   }
 
